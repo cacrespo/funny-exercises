@@ -2,7 +2,7 @@
 Recorridos de Bicicletas de la Ciudad
 https://data.buenosaires.gob.ar/dataset/bicicletas-publicas
 
-Retorna las tres estaciones de origen más “calientes” en la mañana (de 6 a
+Imprime las tres estaciones de origen más “calientes” en la mañana (de 6 a
 11:59)
 """
 
