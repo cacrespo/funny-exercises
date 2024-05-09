@@ -1,0 +1,11 @@
+datawarehouse:
+  outputs:
+    dev:
+      dbname: dwh
+      host: airflow-dbt-postgres-1
+      pass: airflow
+      port: 5432
+      schema: dwh
+      threads: 1
+      type: postgres
+      user: airflow
