@@ -21,7 +21,7 @@ def open_file(file: str) -> list:
     try:
         values = [int(w.rstrip()) for w in open(file)]
     except Exception as e:
-        print(f"No se ha podido procesar el archivo {file}: {e}\n---")
+        print(f"Could not process the file {file}: {e}\n---")
     else:
         print(f"[{file}] processed!")
         file_ok = True
@@ -35,8 +35,8 @@ def open_file(file: str) -> list:
         return values[1:] if file_ok else None
 
 
-def es_numero_dormir(n: int):
-    """Retorna el valor fall asleep"""
+def falls_asleep_number(n: int):
+    """Returns the number where Bleatrix falls asleep"""
     historial = set()
     multiplier = 0
 
@@ -60,5 +60,5 @@ if __name__ == "__main__":
         values = open_file(arg)
         if not (values is None):
             for n, value in enumerate(values):
-                print(f"Case #{n+1}: {es_numero_dormir(value)}")
+                print(f"Case #{n+1}: {falls_asleep_number(value)}")
             print("---")
