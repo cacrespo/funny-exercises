@@ -1,24 +1,20 @@
-import itertools
-
-
-WORDS = {w.rstrip() for w in open('WORD.lst')}  # a set to improve performance
+# To avoid loading the word list on every call
+WORDS = [w.rstrip() for w in open('WORD.lst')]
 
 
 def annograms(word):
     """
-    Returns a set of anagrams of the given word using words from WORD.LST.
+    Returns a list of anagrams of the given word using words from WORD.lst.
 
     Args:
         word (str): The word for which to find anagrams.
 
     Returns:
-        set: A set of valid anagrams of the input word.
+        list: A list of valid anagrams of the input word.
     """
-    permutations = itertools.permutations(word)
 
-    results = {''.join(permut)
-               for permut in permutations if ''.join(permut) in WORDS}
-    return results  # results is a set too to avoid duplicates ;-)
+    results = [w for w in WORDS if sorted(word) == sorted(w) and word != w]
+    return results
 
 
 if __name__ == "__main__":
