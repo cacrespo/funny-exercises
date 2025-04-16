@@ -6,13 +6,10 @@ services:
       POSTGRES_USER: carlos
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: db_workshop
-
     ports:
       - 5432:5432
-    
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    
     networks:
       - metanet1
   
